@@ -1,0 +1,210 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #050508;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bgEffects {
+  position: absolute;
+  inset: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  animation: orbFloat 6s ease-in-out infinite;
+}
+
+.orb1 {
+  width: 400px;
+  height: 400px;
+  background: #ff3200;
+  top: -10%;
+  left: -10%;
+}
+.orb2 {
+  width: 350px;
+  height: 350px;
+  background: #5865f2;
+  bottom: -10%;
+  right: -10%;
+  animation-delay: 3s;
+}
+
+@keyframes orbFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.logoWrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+  border: 2px solid rgba(255, 100, 0, 0.3);
+  box-shadow: 0 0 30px rgba(255, 50, 0, 0.4) inset;
+}
+
+.fireRing {
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #ff6400;
+  border-right-color: #ff3200;
+  box-shadow:
+    0 0 20px rgba(255, 100, 0, 0.5),
+    inset 0 0 20px rgba(255, 100, 0, 0.2);
+  animation: ringSpin 2s linear infinite;
+}
+
+.reverse {
+  inset: -20px;
+  border-top-color: #5865f2;
+  border-right-color: #eb459e;
+  box-shadow:
+    0 0 20px rgba(88, 101, 242, 0.5),
+    inset 0 0 20px rgba(88, 101, 242, 0.2);
+  animation: ringSpin 3s linear infinite reverse;
+  border-width: 1px;
+  opacity: 0.7;
+}
+
+@keyframes ringSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 2px;
+}
+
+.word {
+  background: linear-gradient(135deg, #ffffff, #b5b5c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.xMark {
+  color: #fee75c;
+  font-size: 1.2em;
+  text-shadow: 0 0 20px rgba(254, 231, 92, 0.8);
+}
+
+.status {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.9rem;
+  color: #6b6b80;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: -15px;
+  min-height: 20px;
+}
+
+.progress {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.track {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #5865f2, #eb459e, #ff6400);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.glow {
+  position: absolute;
+  top: -2px;
+  width: 10px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 15px #ff6400,
+    0 0 30px #eb459e;
+  transition: left 0.3s ease;
+}
+
+.percent {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 40px;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .logoWrapper {
+    width: 130px;
+    height: 130px;
+  }
+  .logoImg {
+    width: 90px;
+    height: 90px;
+  }
+  .fireRing {
+    inset: -8px;
+  }
+  .reverse {
+    inset: -16px;
+  }
+}

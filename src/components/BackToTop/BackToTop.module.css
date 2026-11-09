@@ -1,0 +1,30 @@
+﻿.btn {
+  position: fixed;
+  z-index: 900;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  display: inline-flex;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  background: var(--panel);
+  color: var(--gold);
+  font-size: 0.9rem;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.btn:hover,
+.btn:active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--gold-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

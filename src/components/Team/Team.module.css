@@ -1,0 +1,150 @@
+﻿.team {
+  padding: clamp(92px, 12vw, 156px) 0;
+  background: var(--ink-soft);
+}
+
+.container {
+  display: grid;
+  align-items: start;
+  column-gap: clamp(44px, 9vw, 140px);
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+}
+
+.heading {
+  position: sticky;
+  top: 128px;
+  grid-column: 1;
+}
+
+.kicker {
+  margin: 0 0 20px;
+  color: var(--ember);
+  font-family: var(--brand);
+  font-size: 0.68rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  max-width: 420px;
+  margin: 0 0 14px;
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 0.88;
+}
+
+.heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.roster {
+  margin: 0;
+  padding: 0;
+  grid-column: 2;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.member {
+  display: grid;
+  min-height: 126px;
+  padding: 20px 0;
+  align-items: center;
+  column-gap: 20px;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.memberNumber {
+  align-self: start;
+  padding-top: 7px;
+  color: var(--ember);
+  font-family: var(--brand);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.identity h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.identity p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.socialLink {
+  display: inline-flex;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 1rem;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.socialLink:hover,
+.socialLink:active {
+  border-color: var(--line-strong);
+  background: var(--panel);
+  color: var(--gold);
+}
+
+@media (max-width: 780px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 44px;
+  }
+
+  .heading {
+    position: static;
+    grid-column: 1;
+  }
+
+  .heading h2 {
+    max-width: 600px;
+    font-size: clamp(3.4rem, 10vw, 5rem);
+  }
+
+  .roster {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .member {
+    min-height: 108px;
+    column-gap: 10px;
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+  }
+
+  .identity h3 {
+    font-size: 1.8rem;
+  }
+
+  .socials {
+    gap: 0;
+  }
+
+  .socialLink {
+    width: 44px;
+    min-width: 44px;
+  }
+}

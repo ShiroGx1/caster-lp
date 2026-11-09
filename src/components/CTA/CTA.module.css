@@ -1,0 +1,120 @@
+﻿.cta {
+  padding: 20px 0 clamp(72px, 10vw, 128px);
+  background: var(--ink-soft);
+}
+
+.container {
+  position: relative;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  padding: clamp(32px, 6vw, 76px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  overflow: hidden;
+  background: var(--gold);
+  color: var(--gold-ink);
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  max-width: 660px;
+}
+
+.kicker {
+  margin: 0 0 16px;
+  color: var(--gold-ink);
+  font-family: var(--brand);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.copy h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+.copy > p:last-child {
+  margin: 18px 0 0;
+  color: var(--gold-ink);
+}
+
+.backdropMark {
+  position: absolute;
+  top: -0.56em;
+  right: 18%;
+  color: rgba(26, 18, 11, 0.055);
+  font-family: var(--display);
+  font-size: clamp(22rem, 45vw, 40rem);
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.joinButton {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  min-height: 56px;
+  padding: 0 22px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--gold-ink);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.joinButton:hover,
+.joinButton:active {
+  transform: translateY(-2px);
+  background: var(--ember-deep);
+}
+
+.joinButton:focus-visible {
+  outline: 3px solid var(--gold-ink);
+  box-shadow: 0 0 0 6px var(--gold);
+}
+
+@media (max-width: 760px) {
+  .panel {
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .copy h2 {
+    font-size: clamp(3rem, 11vw, 4.8rem);
+  }
+
+  .backdropMark {
+    top: 7%;
+    right: -14%;
+    font-size: 26rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .panel {
+    padding: 30px 24px;
+  }
+
+  .joinButton {
+    width: 100%;
+  }
+}
