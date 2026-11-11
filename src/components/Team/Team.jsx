@@ -22,7 +22,7 @@ const members = [
       {
         name: "TikTok",
         icon: <FaTiktok />,
-        href: "https://www.tiktok.com/@muflih_og?_r=1&_t=ZS-98hmG2qaaAr",
+        href: "https://www.tiktok.com/@koharu_ozora?_r=1&_t=ZS-9BJuaSMfEXw",
       },
       {
         name: "Instagram",
@@ -38,7 +38,7 @@ const members = [
       {
         name: "TikTok",
         icon: <FaTiktok />,
-        href: "https://www.tiktok.com/@kuroxnight?_r=1&_t=ZS-98hmXQ8Nf6",
+        href: "https://www.tiktok.com/@kuro.nekomori?_r=1&_t=ZS-9BJubxRgvzT",
       },
       {
         name: "Instagram",
@@ -51,7 +51,7 @@ const members = [
     name: "ICIBOSS",
     role: "TikTok streamer",
     socials: [
-      { name: "TikTok", icon: <FaTiktok />, href: "https://www.tiktok.com/@icibossplayz" },
+      { name: "TikTok", icon: <FaTiktok />, href: "https://www.tiktok.com/@icibos_playz?_r=1&_t=ZS-9BJueqE8TlS" },
       {
         name: "Instagram",
         icon: <FaInstagram />,

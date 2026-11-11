@@ -25,7 +25,7 @@ const teamData = [
       { type: "riot", href: "#", label: "Valorant" },
       {
         type: "tiktok",
-        href: "https://www.tiktok.com/@muflih_og?is_from_webapp=1&sender_device=pc",
+        href: "https://www.tiktok.com/@koharu_ozora?_r=1&_t=ZS-9BJuaSMfEXw",
         label: "TikTok",
       },
     ],
@@ -37,8 +37,10 @@ const teamData = [
     icon: "gavel",
     status: "idle",
     socials: [
-      { type: "riot", href: "#", label: "Valorant" },
-      { type: "steam", href: "#", label: "Steam" },
+      { type: "tiktok", href: "https://www.tiktok.com/@kuro.nekomori?_r=1&_t=ZS-9BJubxRgvzT", 
+        label: "tiktok" },
+      { type: "instagram",
+         href: "#", label: "instagram" },
     ],
   },
   {
@@ -50,7 +52,7 @@ const teamData = [
     socials: [
       {
         type: "tiktok",
-        href: "https://www.tiktok.com/@icibossplayz?is_from_webapp=1&sender_device=pc",
+        href: "https://www.tiktok.com/@icibos_playz?_r=1&_t=ZS-9BJueqE8TlS",
         label: "TikTok",
       },
       {
